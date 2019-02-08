@@ -42,6 +42,6 @@ $RECYCLE.BIN/
 *.lnk
 
 *.pdf
-*.doc
+*.doc*
 
 # End of https://www.gitignore.io/api/git,windows
