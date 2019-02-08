@@ -1,0 +1,89 @@
+    1. Crea una carpeta en tu equipo.
+
+cd /C/Users/IFC/Desktop/ED/07022019
+
+    2. Inicia en la carpeta anterior un repositorio de git.
+
+git init
+
+    3. Añade 5 ficheros de texto: ciudades europeas, ciudades americanas, provincias españolas, 
+	paises de la UE, paises fuera de la UE.
+
+touch ciudadesEuropeas
+touch ciudadesAmericanas
+provinciasEspañolas
+touch paisesUE
+touch paisesNoUE
+
+    4. Añade contenido en todos los ficheros anteriores y haz commit.
+
+vi <nombreFichero> y añadimos 5 ciudades/países/provincias
+git add .
+git commit -m "new stuff"
+
+
+    5. Crea otra rama (llámala develop por ejemplo) y cámbiate a ella.
+
+git branch develop
+git checkout develop
+
+    6. Añade contenido en los ficheros del repositorio y haz commit.
+
+vi <nombreFichero> y añadimos 2 ciudades/países/provincias
+git add .
+git commit -m "new stuff develop branch"
+
+    7. Vuelve a la rama anterior (master) y añade más contenido a los ficheros.
+
+git checkout master
+vi <nombreFichero> y añadimos Detroit/Marsella/Castilla Leon/Chile/Suecia
+git add .
+git commit -m "new stuff master branch 7"
+
+    8. Fusiona (merge) las ramas que tienes. Si aparecen conflictos, resuélvelos.
+
+git merge develop
+no nos deja, por lo que eliminamos las divisiones entre las branches que se generan en los ficheros
+git add .
+git commit -m "merge branches"
+
+    9. Crea un tag o etiqueta de la versión fusionada.
+
+git tag v0.0.1 -m "2 branches merged together"
+
+    10. Sube a tu cuenta de github el repositorio. Deberás primero crear un repositorio vacío
+	(sin ficheros) en tu cuenta de github y seguir las instrucciones de la página.
+
+git remote add origin https://github.com/jorgerivasb/git.git
+git push -u origin master
+
+    11. Añade un fichero .gitignore a tu repositorio que tenga en cuenta que tu repositorio se va 
+	a manejar desde windows y en él se deberían ignorar los ficheros propios de windows, 
+	así como .pdf y .doc
+
+git add .
+git commit -m ".gitignore"
+git push -u origin master
+
+    12. Copia en la carpeta de tu repositorio un documento de word y un pdf.
+
+git add .
+git commit -m "pdf"
+git push -u origin master
+
+    13. Haz commit y push del contenido del repositorio. ¿Qué ha ocurrido?
+
+no nos muestra el archivo pdf
+
+    14. Investiga los comandos de git: log, diff y status. ¿Qué hacen?
+
+git status nos indica los archivos creados o modificados que debemos confirmar
+
+git log nos muestra el historial de los commit de la branch actual
+
+git diff <branch1> <branch2> nos muestra el contenido que solo aparece en una branch
+
+
+    15. Pon en un fichero de texto los comandos de git que has introducido en cada ejercicio 
+	junto con las respuestas a las cuestiones que se plantean y añádelo a tu repositorio. 
+	Haz commit, push y envíame el enlace por email.
